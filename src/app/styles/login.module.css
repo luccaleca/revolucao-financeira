@@ -1,0 +1,134 @@
+.wrapper { /* Container principal da página de login */
+  display: flex; /* Layout em linha (lado a lado) */
+  height: 100vh; /* Altura total da tela */
+  width: 100vw;  /* Largura total da tela */
+  overflow: hidden; /* Esconde rolagem extra */
+  background-color: #1a1a2e; /* Cor de fundo escura */
+  color: #e0e0e0; /* Cor do texto padrão */
+}
+
+.loginContainer { /* Área do formulário de login */
+  flex: 1; /* Ocupa 1 parte do espaço disponível */
+  display: flex; /* Centraliza conteúdo vertical e horizontalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  background-color: #16213e; /* Fundo um pouco mais claro */
+  padding: 20px; /* Espaçamento interno */
+  min-width: 350px; /* Largura mínima para não ficar muito pequeno */
+}
+
+.loginContent { /* Caixa do conteúdo do login */
+  background-color: #0f3460; /* Fundo ainda mais claro */
+  padding: 40px; /* Espaçamento interno */
+  border-radius: 8px; /* Cantos arredondados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+  text-align: center; /* Centraliza texto */
+  max-width: 400px; /* Largura máxima */
+  width: 100%; /* Ocupa toda a largura disponível */
+}
+
+.loginContent h1 { /* Título do login */
+  margin-bottom: 10px; /* Espaço abaixo do título */
+  color: #e94560; /* Cor de destaque */
+}
+
+.loginContent p { /* Subtítulo/descrição */
+  margin-bottom: 30px; /* Espaço abaixo do texto */
+  color: #b0b0b0; /* Cor mais clara */
+}
+
+.inputWrapper { /* Envolve cada campo do formulário */
+  margin-bottom: 20px; /* Espaço entre campos */
+  text-align: left; /* Alinha texto à esquerda */
+}
+
+.inputWrapper label { /* Rótulo dos campos */
+  display: block; /* Ocupa linha inteira */
+  margin-bottom: 8px; /* Espaço abaixo do rótulo */
+  font-weight: bold; /* Negrito */
+}
+
+.inputWrapper input { /* Campos de entrada */
+  width: 100%; /* Ocupa toda a largura */
+  padding: 12px; /* Espaçamento interno */
+  border: 1px solid #3e445b; /* Borda discreta */
+  border-radius: 4px; /* Cantos arredondados */
+  background-color: #2c324a; /* Fundo do input */
+  color: #e0e0e0; /* Cor do texto */
+  font-size: 16px; /* Tamanho da fonte */
+  box-sizing: border-box; /* Inclui padding/borda no tamanho */
+}
+
+.inputWrapper input::placeholder { /* Placeholder dos inputs */
+  color: #888; /* Cor do texto do placeholder */
+}
+
+.options { /* Linha do "Esqueceu a senha?" */
+  text-align: right; /* Alinha à direita */
+  margin-bottom: 20px; /* Espaço abaixo */
+}
+
+.options a, .registerPrompt a { /* Links de ação */
+  color: #e94560; /* Cor de destaque */
+  text-decoration: none; /* Remove sublinhado */
+  font-size: 14px; /* Tamanho da fonte */
+}
+
+.options a:hover, .registerPrompt a:hover { /* Hover nos links */
+  text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+.submitButton { /* Botão de login */
+  width: 100%; /* Ocupa toda a largura */
+  padding: 15px; /* Espaçamento interno */
+  background-color: #e94560; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Sem borda */
+  border-radius: 4px; /* Cantos arredondados */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  cursor: pointer; /* Cursor de mãozinha */
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.submitButton:hover { /* Hover do botão */
+  background-color: #d13a52; /* Cor mais escura ao passar o mouse */
+}
+
+.registerPrompt { /* Linha do "Não tem uma conta?" */
+  margin-top: 25px; /* Espaço acima */
+  font-size: 15px; /* Tamanho da fonte */
+}
+
+.imageContainer { /* Área da imagem ao lado do login */
+  flex: 2; /* Ocupa 2 partes do espaço disponível */
+  display: flex; /* Centraliza imagem */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  background-color: #0f3460; /* Fundo igual ao loginContent */
+  position: relative; /* Para posicionamento futuro se necessário */
+}
+
+.image { /* Imagem exibida */
+  width: 100%; /* Ocupa toda a largura do container */
+  height: 100%; /* Ocupa toda a altura do container */
+  object-fit: cover; /* Cobre o espaço sem distorcer */
+  border-radius: 12px; /* Cantos arredondados */
+}
+
+@media (max-width: 768px) { /* Responsividade para telas menores */
+  .wrapper {
+    flex-direction: column; /* Empilha login e imagem */
+  }
+
+  .loginContainer {
+    width: 100%; /* Ocupa toda a largura */
+    min-width: unset; /* Remove largura mínima */
+    padding: 20px; /* Espaçamento interno */
+  }
+
+  .imageContainer {
+    width: 100%; /* Ocupa toda a largura */
+    height: 300px; /* Altura fixa para imagem */
+  }
+}

@@ -1,0 +1,113 @@
+/* Sidebar fixa à esquerda, altura total da tela */
+.sidebar {
+  width: 220px;                /* Largura da sidebar */
+  height: 100vh;               /* Altura total da tela */
+  background: #16213e;         /* Cor de fundo escura */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;        /* Estica os itens para ocupar toda a largura */
+  padding: 32px 0 24px 0;      /* Espaçamento interno */
+  box-shadow: 2px 0 12px rgba(0,0,0,0.07); /* Sombra lateral */
+  position: fixed;             /* Fixa na lateral */
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* Lista de menus */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;                     /* Ocupa o espaço vertical */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;                   /* Espaço entre botões */
+}
+
+/* Cada item do menu */
+.menuItem {
+  width: 100%;
+}
+
+/* Link estilizado como botão */
+.menuItem a {
+  display: block;
+  width: 100%;
+  padding: 14px 24px;
+  color: #e0e0e0;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.menuItem a:hover,
+.menuItem a:focus {
+  background: #202b43; /* Apenas um leve fundo mais escuro */
+  color: #e0e0e0;      /* Mantém o texto claro */
+  outline: none;
+  
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 60px;
+    padding: 16px 0;
+  }
+  .menuItem a {
+    padding: 12px 10px;
+    font-size: 0;
+  }
+  .menuItem a::before {
+    content: '•';
+    font-size: 24px;
+    color: #e0e0e0;
+  }
+}
+
+/* Sidebar contraída */
+.collapsed {
+  width: 60px !important;           /* Reduz a largura */
+  padding: 16px 0 !important;       /* Menos padding */
+}
+
+.collapsed .menuItem a {
+  font-size: 0 !important;          /* Esconde o texto */
+  padding: 12px 10px !important;    /* Padding menor */
+}
+
+.collapsed .menuItem a::before {
+  content: ''; /* Remove as bolinhas quando contraída */
+  font-size: 0;
+  margin-right: 0;
+  display: none;
+}
+
+/* Botão de contração no topo direito */
+.collapseBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 101;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  margin-bottom: 32px; /* Espaço extra abaixo do botão */
+}
+
+/* Espaço extra entre o botão e o menu */
+.sidebar .menu {
+  margin-top: 48px; /* Adiciona espaço entre o botão e os itens do menu */
+}

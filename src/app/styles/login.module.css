@@ -3,8 +3,8 @@
   height: 100vh; /* Altura total da tela */
   width: 100vw;  /* Largura total da tela */
   overflow: hidden; /* Esconde rolagem extra */
-  background-color: #1a1a2e; /* Cor de fundo escura */
-  color: #e0e0e0; /* Cor do texto padrão */
+  background: linear-gradient(180deg, #0B8ADD 80%, #0872b9 100%); /* Degradê azul */
+  color: #16213e; /* Cor do texto padrão */
 }
 
 .loginContainer { /* Área do formulário de login */
@@ -12,29 +12,31 @@
   display: flex; /* Centraliza conteúdo vertical e horizontalmente */
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
-  background-color: #16213e; /* Fundo um pouco mais claro */
+  background: #eaf4fb; /* Azul bem claro para diferenciar do fundo geral */
   padding: 20px; /* Espaçamento interno */
   min-width: 350px; /* Largura mínima para não ficar muito pequeno */
 }
 
 .loginContent { /* Caixa do conteúdo do login */
-  background-color: #0f3460; /* Fundo ainda mais claro */
+  background: #fff; /* Caixa branca para o formulário */
   padding: 40px; /* Espaçamento interno */
-  border-radius: 8px; /* Cantos arredondados */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+  border-radius: 12px; /* Cantos arredondados */
+  box-shadow: 0 4px 24px rgba(11, 138, 221, 0.10); /* Sombra para destaque */
   text-align: center; /* Centraliza texto */
   max-width: 400px; /* Largura máxima */
   width: 100%; /* Ocupa toda a largura disponível */
+  color: #16213e; /* Cor do texto */
+  border: 2px solid #0B8ADD; /* Borda azul para destacar */
 }
 
 .loginContent h1 { /* Título do login */
   margin-bottom: 10px; /* Espaço abaixo do título */
-  color: #e94560; /* Cor de destaque */
+  color: #0B8ADD; /* Azul principal */
 }
 
 .loginContent p { /* Subtítulo/descrição */
   margin-bottom: 30px; /* Espaço abaixo do texto */
-  color: #b0b0b0; /* Cor mais clara */
+  color: #0872b9; /* Azul secundário */
 }
 
 .inputWrapper { /* Envolve cada campo do formulário */
@@ -81,8 +83,8 @@
 .submitButton { /* Botão de login */
   width: 100%; /* Ocupa toda a largura */
   padding: 15px; /* Espaçamento interno */
-  background-color: #e94560; /* Cor de fundo */
-  color: white; /* Cor do texto */
+  background-color: #0B8ADD; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
   border: none; /* Sem borda */
   border-radius: 4px; /* Cantos arredondados */
   font-size: 18px; /* Tamanho da fonte */
@@ -92,7 +94,7 @@
 }
 
 .submitButton:hover { /* Hover do botão */
-  background-color: #d13a52; /* Cor mais escura ao passar o mouse */
+  background-color: #0872b9; /* Cor mais escura ao passar o mouse */
 }
 
 .registerPrompt { /* Linha do "Não tem uma conta?" */
@@ -105,8 +107,9 @@
   display: flex; /* Centraliza imagem */
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
-  background-color: #0f3460; /* Fundo igual ao loginContent */
+  background: #0B8ADD; /* Azul forte para diferenciar ainda mais */
   position: relative; /* Para posicionamento futuro se necessário */
+  border-radius: 0 12px 12px 0;
 }
 
 .image { /* Imagem exibida */

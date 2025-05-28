@@ -1,22 +1,29 @@
 "use client";
-import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import styles from '../styles/sidebar.module.css'; 
 
-export default function Sidebar() {
-  const [collapsed, setCollapsed] = useState(false);
+export default function Sidebar({ collapsed, setCollapsed }) {
   const router = useRouter();
 
   function handleSair(e) {
     e.preventDefault();
     if (window.confirm("Você quer mesmo sair?")) {
-      router.push('/login');
+      router.push('/'); // Vai para a página inicial (login)
     }
   }
 
   return (
     <nav className={`${styles.sidebar} ${collapsed ? styles.collapsed : ''}`}>
+      <div className={styles.logoContainer}>
+        <div className={styles.logoCard}>
+          <img
+            src="/images/logo.png"
+            alt="Logo"
+            className={styles.logo}
+          />
+        </div>
+      </div>
       <button
         className={styles.collapseBtn}
         onClick={() => setCollapsed(!collapsed)}
@@ -26,26 +33,22 @@ export default function Sidebar() {
       </button>
       <ul className={styles.menu}>
         <li className={styles.menuItem}>
-          <Link href="/dashboard">Dashboard</Link>
+          <Link href="/interno/home">Home</Link>
         </li>
         <li className={styles.menuItem}>
-          <Link href="/receitas">Receitas</Link>
+          <Link href="/interno/dashboard">Dashboard</Link>
         </li>
         <li className={styles.menuItem}>
-          <Link href="/despesas">Despesas</Link>
+          <Link href="/interno/contasPagarReceber">Pagar/Receber</Link>
         </li>
         <li className={styles.menuItem}>
-          <Link href="/profile">Contas a Pagar/Receber</Link>
+          <Link href="/interno/relatorios">Relatórios</Link>
         </li>
         <li className={styles.menuItem}>
-          <Link href="/relatorios">Relatórios</Link>
+          <Link href="/interno/configuracao">Configuração</Link>
         </li>
         <li className={styles.menuItem}>
-          <Link href="/configuracao">Configuração</Link>
-        </li>
-        <li className={styles.menuItem}>
-          {/* Botão de sair com confirmação */}
-          <a href="/login" onClick={handleSair}>Sair</a>
+          <a href="/" onClick={handleSair}>Sair</a>
         </li>
       </ul>
     </nav>

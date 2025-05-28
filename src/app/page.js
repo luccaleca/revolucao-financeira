@@ -1,5 +1,5 @@
 "use client"; // Indica que este é um componente do lado do cliente
-import styles from '../styles/login.module.css';
+import styles from '../app/styles/login.module.css';
 import { useRouter } from 'next/navigation'; // Importa o hook
 
 export default function LoginPage() {
@@ -7,7 +7,7 @@ export default function LoginPage() {
 
   function handleSubmit(e) {
     e.preventDefault(); // Evita o reload da página
-    router.push('/home'); // Redireciona para /home
+    router.push('interno/home'); // Redireciona para /home
   }
 
   return (
@@ -15,7 +15,7 @@ export default function LoginPage() {
       {/* Seção de Login */}
       <div className={styles.loginContainer}>
         <div className={styles.loginContent}>
-          <h1>Bem-vindo(a) ao Controle Financeiro</h1>
+          <h1>Bem-vindo(a) ao Revolução Financeira</h1>
           <p>Faça login para continuar</p>
 
           <form className={styles.form} onSubmit={handleSubmit}>
@@ -30,14 +30,14 @@ export default function LoginPage() {
             </div>
 
             <div className={styles.options}>
-              <a href="/forgot-password">Esqueceu a senha?</a>
+              <a href="/esqueceu-senha">Esqueceu a senha?</a>
             </div>
 
             <button type="submit" className={styles.submitButton}>Entrar</button>
           </form>
 
           <div className={styles.registerPrompt}>
-            Não tem uma conta? <a href="/register">Cadastre-se aqui</a>
+            Não tem uma conta? <a href="/registrar">Cadastre-se aqui</a>
           </div>
         </div>
       </div>

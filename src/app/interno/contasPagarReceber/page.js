@@ -120,7 +120,6 @@ export default function ContasPagarReceberPage() {
 
   return (
     <>
-      <h2 className={styles.tituloCentralizado}>Contas a Pagar e Receber</h2>
       <div className={styles.botoesVisualizacao}>
         <button
           className={styles.botaoVisualizacao}

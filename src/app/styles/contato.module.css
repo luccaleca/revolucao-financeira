@@ -1,0 +1,87 @@
+.container {
+  min-height: 100vh;
+  background: #f7fafd;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px 0;
+}
+
+.formBox {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px 0 rgba(22,33,62,0.10);
+  padding: 48px 36px;
+  max-width: 420px;
+  width: 100%;
+  margin: 40px 16px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.titulo {
+  color: #0B8ADD;
+  font-size: 2rem;
+  margin-bottom: 32px;
+  font-weight: 700;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1.5px solid #e0eaf5;
+  font-size: 1.08rem;
+  margin-top: 6px;
+  font-family: inherit;
+  background: #f7fafd;
+  resize: none;
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border-color: #0B8ADD;
+  background: #fff;
+}
+
+.botaoEnviar {
+  background: #0B8ADD;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 0;
+  font-size: 1.13rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+  width: 100%;
+  box-shadow: 0 2px 8px 0 rgba(11,138,221,0.08);
+}
+
+.botaoEnviar:hover {
+  background: #0872b9;
+}
+
+.botaoVoltar {
+  background: #0B8ADD;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 24px;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(11,138,221,0.08);
+}
+
+.botaoVoltar:hover {
+  background: #0872b9;
+}

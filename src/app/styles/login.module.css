@@ -19,11 +19,11 @@
 
 .loginContent { /* Caixa do conteúdo do login */
   background: #fff; /* Caixa branca para o formulário */
-  padding: 40px; /* Espaçamento interno */
+  padding: 32px 24px;     /* Menos padding vertical */
   border-radius: 12px; /* Cantos arredondados */
   box-shadow: 0 4px 24px rgba(11, 138, 221, 0.10); /* Sombra para destaque */
   text-align: center; /* Centraliza texto */
-  max-width: 400px; /* Largura máxima */
+  max-width: 500px; /* aumente aqui para caber uma logo maior */
   width: 100%; /* Ocupa toda a largura disponível */
   color: #16213e; /* Cor do texto */
   border: 2px solid #0B8ADD; /* Borda azul para destacar */
@@ -117,6 +117,54 @@
   height: 100%; /* Ocupa toda a altura do container */
   object-fit: cover; /* Cobre o espaço sem distorcer */
   border-radius: 12px; /* Cantos arredondados */
+}
+
+.logoContainer {
+  border-radius: 12px;
+  margin-bottom: -50px;      /* Reduzido ao mínimo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  width: 340px;           /* Ajuste para o tamanho desejado */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background-color: transparent;
+}
+
+.imageCaption {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  background: rgba(22, 33, 62, 0.85); /* Fundo escuro translúcido */
+  color: #fff;
+  padding: 18px 22px 14px 22px;
+  border-radius: 12px;
+  max-width: 85%;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.categoria {
+  font-size: 0.95rem;
+  color: #b0c4d8;
+  font-weight: 500;
+  margin-bottom: 2px;
+  letter-spacing: 1px;
+}
+
+.texto {
+  font-size: 1.5rem;    /* Aumente para 1.35rem ou 1.5rem */
+  font-weight: 700;      /* Mais negrito */
+  color: #fff;
+  line-height: 1.35;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18); /* Mais destaque */
 }
 
 @media (max-width: 768px) { /* Responsividade para telas menores */

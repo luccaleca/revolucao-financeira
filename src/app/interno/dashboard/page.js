@@ -4,11 +4,7 @@ import styles from '../../styles/dashboard.module.css';
 export default function DashboardPage() {
   return (
     <div className={styles.container}>
-      {/* Cabeçalho */}
-      <header className={styles.header}>
-        <h1>Dashboard</h1>
-      </header>
-
+  
       {/* Conteúdo Principal */}
       <main className={styles.mainContent}>
         <div className={styles.grid}>

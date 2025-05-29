@@ -1,7 +1,9 @@
 .container {
   display: flex;
   height: 100vh;
-  background: #f4f4f9;
+  padding: 32px 40px;
+  min-height: 100vh;
+  background: #f7fafd;
 }
 
 .sidebar {
@@ -49,6 +51,14 @@
   letter-spacing: 1px;
 }
 
+.titulo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #0B8ADD;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
 .carrosselUnico {
   display: flex;
   justify-content: center;
@@ -90,6 +100,40 @@
   text-align: left;
 }
 
+.cardsLinha {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(11, 138, 221, 0.08);
+  padding: 28px 24px;
+  min-width: 260px;
+  max-width: 320px;
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.card h2 {
+  color: #0872b9;
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+}
+
+.card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
 .dicas, .curiosidades, .feedback {
   background: #fff;
   border-radius: 16px;
@@ -125,22 +169,150 @@
   margin: 0;
 }
 
-.botaoFeedback {
-  margin-top: 16px;
+.atalho {
   background: #0B8ADD;
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 10px 28px;
+  padding: 12px 0;
+  margin-bottom: 10px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s;
+  width: 100%;
+}
+
+.atalho:hover {
+  background: #0872b9;
+}
+
+.botaoFeedback {
+  margin-top: 16px;
+  background: #fff;
+  color: #0B8ADD;
+  border: 2px solid #0B8ADD;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.2s, color 0.2s;
   box-shadow: 0 2px 8px 0 rgba(22,33,62,0.08);
 }
 
 .botaoFeedback:hover {
+  background: #0B8ADD;
+  color: #fff;
+}
+
+.cardDestaque, .cardSuporte, .cardFeedback, .cardGuia, .cardContato {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px 0 rgba(22,33,62,0.10);
+  padding: 38px 32px;
+  min-width: 320px;
+  max-width: 400px;
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  border: 1.5px solid #f0f0f0;
+  transition: box-shadow 0.2s, transform 0.2s;
+  margin-bottom: 0;
+}
+
+.cardDestaque:hover, .cardSuporte:hover, .cardFeedback:hover, .cardGuia:hover, .cardContato:hover {
+  box-shadow: 0 12px 40px 0 rgba(11, 138, 221, 0.13);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.cardDestaque h2, .cardSuporte h2, .cardFeedback h2, .cardGuia h2, .cardContato h2 {
+  color: #0B8ADD;
+  font-size: 1.7rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.cardDestaque ul, .cardFeedback ul {
+  padding-left: 22px;
+  margin: 0;
+}
+
+.cardDestaque li {
+  margin-bottom: 14px;
+  font-size: 1.18rem;
+  color: #16213e;
+}
+
+.cardDestaque p, .cardSuporte p, .cardFeedback p, .cardGuia p, .cardContato p {
+  color: #222;
+  font-size: 1.18rem;
+  margin: 0 0 10px 0;
+}
+
+.cardSuporte button, .cardFeedback button {
+  margin-top: 22px;
+  background: #0B8ADD;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 0;
+  font-size: 1.13rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+  box-shadow: 0 2px 8px 0 rgba(22,33,62,0.08);
+}
+
+.cardSuporte button:hover, .cardFeedback button:hover {
   background: #0872b9;
+}
+
+.cardGuia, .cardContato {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px 0 rgba(22,33,62,0.10);
+  padding: 38px 32px;
+  min-width: 320px;
+  max-width: 400px;
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  border: 1.5px solid #f0f0f0;
+  transition: box-shadow 0.2s, transform 0.2s;
+  margin-bottom: 0;
+}
+
+.cardGuia h2, .cardContato h2 {
+  color: #0B8ADD;
+  font-size: 1.7rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.cardGuia ul, .cardContato ul {
+  padding-left: 22px;
+  margin: 0;
+}
+
+.cardGuia li, .cardContato li {
+  margin-bottom: 14px;
+  font-size: 1.18rem;
+  color: #16213e;
+}
+
+.cardGuia p, .cardContato p {
+  color: #222;
+  font-size: 1.18rem;
+  margin: 0 0 10px 0;
 }
 
 /* Responsividade */
@@ -155,5 +327,18 @@
   .dicas, .curiosidades, .feedback {
     max-width: 100%;
     padding: 20px 8px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .cardsLinha {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+  .cardDestaque, .cardSuporte, .cardFeedback, .cardGuia, .cardContato {
+    max-width: 98vw;
+    min-width: 0;
+    width: 100%;
   }
 }

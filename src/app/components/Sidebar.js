@@ -57,7 +57,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
           <Link href="/interno/configuracao">Configuração</Link>
         </li>
         <li className={styles.menuItem}>
-          <a href="/" onClick={handleSair}>Sair</a>
+          <Link href="/" onClick={handleSair}>Sair</Link>
         </li>
       </ul>
     </nav>

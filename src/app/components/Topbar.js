@@ -8,13 +8,13 @@ export default function Topbar({ titulo }) {
         top: 0,
         left: 0,
         width: "100vw",
-        background: "#0B8ADD",
-        padding: "20px 32px",
+        background: "linear-gradient(270deg, #0872b9 0%, #0B8ADD 80%)",
+        padding: "28px 32px", // aumente o padding vertical
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         boxShadow: "0 2px 8px rgba(11, 138, 221, 0.08)",
-        minHeight: "36px",
+        minHeight: "35px", // aumente a altura mínima
       }}
     >
       <h1

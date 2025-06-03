@@ -42,16 +42,13 @@ export default function Sidebar({ collapsed, setCollapsed }) {
           <Link href="/interno/contasPagarReceber">Pagar/Receber</Link>
         </li>
         <li className={styles.menuItem}>
-          <Link href="/interno/contasPagarReceber">Receitas/Despesas</Link>
+          <Link href="/interno/analiseLiquidez">Análise de Liquidez</Link>
         </li>
         <li className={styles.menuItem}>
-          <Link href="/interno/contasPagarReceber">Análise de Liquidez</Link>
+          <Link href="/interno/planejamentoOrcamentario">Planejamento Orçamentário</Link>
         </li>
         <li className={styles.menuItem}>
-          <Link href="/interno/contasPagarReceber">Planejamento Orçamentário</Link>
-        </li>
-        <li className={styles.menuItem}>
-          <Link href="/interno/relatorios">Relatórios</Link>
+          <Link href="/interno/dre">DRE</Link>
         </li>
         <li className={styles.menuItem}>
           <Link href="/interno/configuracao">Configuração</Link>

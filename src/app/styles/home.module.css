@@ -26,6 +26,7 @@
   min-height: 100vh;
   background: #f8fafc;
   padding: 48px 24px 24px 24px;
+  border: 2px solid red; /* Adicione esta linha para visualizar o espaço */
 }
 
 .sidebarCollapsed .mainContent {

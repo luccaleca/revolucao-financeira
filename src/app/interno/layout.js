@@ -10,7 +10,7 @@ const TITULOS = {
   '/interno/home': 'Home',
   '/interno/dashboard': 'Dashboard',
   '/interno/contasPagarReceber': 'Contas a Pagar e Receber',
-  '/interno/relatorios': 'Relatórios',
+  '/interno/dre': 'Demonstração do Resultado do Exercício (DRE)',
   '/interno/configuracao': 'Configuração',
   '/interno/receitasDespesas': 'Receitas e Despesas',
   '/interno/analiseLiquidez': 'Análise de Liquidez',

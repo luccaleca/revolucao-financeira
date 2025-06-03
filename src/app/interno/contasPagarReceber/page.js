@@ -156,6 +156,10 @@ export default function ContasPagarReceberPage() {
     setShowForm(false);
   };
 
+  const handleRemoverEvento = (id) => {
+    setDadosTabela(prev => prev.filter(item => item.id !== id));
+  };
+
   const totalReceitas = dadosTabela.filter(i => i.tipo === "Receita").reduce((acc, cur) => acc + cur.valor, 0);
   const totalDespesas = dadosTabela.filter(i => i.tipo === "Despesa").reduce((acc, cur) => acc + cur.valor, 0);
   const saldo = totalReceitas - totalDespesas;
@@ -240,27 +244,6 @@ export default function ContasPagarReceberPage() {
                     day: 'numeric'
                   })}
                 </h3>
-                <ul>
-                  {dadosTabela
-                    .filter(item => item.data === new Date(selectedDate).toLocaleDateString('pt-BR'))
-                    .map((item) => (
-                      <li key={item.id} style={{ marginBottom: 16, borderBottom: '1px solid #eee', paddingBottom: 8 }}>
-                        <div><strong>Nome:</strong> {item.nome}</div>
-                        <div><strong>Descrição:</strong> {item.descricao}</div>
-                        <div><strong>Categoria:</strong> {item.categoria}</div>
-                        <div><strong>Forma de Pagamento:</strong> {item.formaPagamento}</div>
-                        <div><strong>Vencimento:</strong> {item.vencimento}</div>
-                        <div><strong>Status:</strong> {item.status}</div>
-                        <div><strong>Data:</strong> {item.data}</div>
-                        <div>
-                          <strong>Valor:</strong> {item.tipo === "Despesa"
-                            ? `R$ -${Number(item.valor).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`
-                            : `R$ +${Number(item.valor).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`}
-                        </div>
-                        <div><strong>Observação:</strong> {item.observacao}</div>
-                      </li>
-                    ))}
-                </ul>
                 {showForm ? (
                   <form onSubmit={handleFormSubmit} className={styles.formularioEvento}>
                     <div>
@@ -339,6 +322,52 @@ export default function ContasPagarReceberPage() {
                 ) : (
                   <button className={styles.botao} onClick={handleAddEvent}>Adicionar Evento</button>
                 )}
+                <ul>
+                  {dadosTabela
+                    .filter(item => item.data === new Date(selectedDate).toLocaleDateString('pt-BR'))
+                    .map((item) => (
+                      <li
+                        key={item.id}
+                        style={{
+                          marginBottom: 16,
+                          borderBottom: '1px solid #eee',
+                          paddingBottom: 8,
+                          position: 'relative'
+                        }}
+                      >
+                        <button
+                          onClick={() => handleRemoverEvento(item.id)}
+                          style={{
+                            position: 'absolute',
+                            top: 4,
+                            right: 4,
+                            background: 'transparent',
+                            border: 'none',
+                            color: '#c62828',
+                            fontWeight: 'bold',
+                            fontSize: 18,
+                            cursor: 'pointer',
+                            lineHeight: 1
+                          }}
+                          title="Remover evento"
+                        >
+                          ×
+                        </button>
+                        <div><strong>Nome:</strong> {item.nome}</div>
+                        <div><strong>Descrição:</strong> {item.descricao}</div>
+                        <div><strong>Categoria:</strong> {item.categoria}</div>
+                        <div><strong>Forma de Pagamento:</strong> {item.formaPagamento}</div>
+                        <div><strong>Vencimento:</strong> {item.vencimento}</div>
+                        <div><strong>Status:</strong> {item.status}</div>
+                        <div><strong>Data:</strong> {item.data}</div>
+                        <div>
+                          <strong>Valor:</strong> {item.tipo === "Despesa"
+                            ? `R$ -${Number(item.valor).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`
+                            : `R$ +${Number(item.valor).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`}
+                        </div>
+                      </li>
+                    ))}
+                </ul>
               </div>
             )}
           </>

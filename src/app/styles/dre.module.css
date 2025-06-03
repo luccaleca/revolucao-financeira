@@ -1,0 +1,96 @@
+.dreContainer {
+  width: 90vw;
+  min-width: 320px;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 32px 32px 24px 32px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #0002;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.dreTitle {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #1976d2;
+  margin-bottom: 8px;
+}
+
+.dreSubtitle {
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+}
+
+.dreForm {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.dreField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.dreLabel {
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.dreHint {
+  font-size: 0.95em;
+  color: #888;
+  margin-bottom: 2px;
+  margin-left: 2px;
+}
+
+.dreInput input,
+.dreInput input[readonly] {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1.5px solid #b3c6e0;
+  border-radius: 7px;
+  font-size: 1.08em;
+  background: #f7fbff;
+  transition: border 0.2s;
+}
+
+.dreInput input:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+.dreInput input[readonly] {
+  background: #f1f8e9;
+  color: #1976d2;
+  font-weight: bold;
+  border: 1.5px solid #c5e1a5;
+}
+
+.dreTotal {
+  background: #e3f2fd;
+  border-radius: 7px;
+  padding: 10px 12px;
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #1976d2;
+  margin-top: 8px;
+  border: 1.5px solid #90caf9;
+}
+
+@media (max-width: 800px) {
+  .dreContainer {
+    width: 98vw;
+    max-width: 99vw;
+    padding: 16px 4vw;
+    margin: 16px 0;
+  }
+}

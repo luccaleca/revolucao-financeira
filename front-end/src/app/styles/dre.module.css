@@ -1,0 +1,227 @@
+.dreSplitContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #f4f8fb 60%, #e3eaf2 100%);
+  padding: 40px 0 60px 0;
+  box-sizing: border-box;
+}
+
+.dreContainer {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 32px #0002;
+  padding: 32px 32px 28px 32px;
+  width: 100%;
+  max-width: 1000px;
+  overflow-x: auto;
+  margin-bottom: 0;
+  transition: box-shadow 0.2s;
+}
+
+.dreContainer h2 {
+  margin-bottom: 22px;
+  color: #1976d2;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.dreContainer table {
+  min-width: 900px; /* Garante largura mínima para todos os meses */
+  width: max-content; /* Faz a tabela crescer conforme necessário */
+  margin-bottom: 18px;
+  border-collapse: collapse;
+}
+
+.dreContainer th, .dreContainer td {
+  padding: 6px 4px;
+  text-align: left;
+}
+
+.dreContainer th {
+  color: #1976d2;
+  font-weight: 600;
+  font-size: 1rem;
+  background: #f4f8fb;
+}
+
+.dreContainer input[type="number"] {
+  width: 70px;
+  padding: 6px 8px;
+  border: 1px solid #c9d6e2;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f7fbff;
+  transition: border 0.2s;
+}
+
+.dreContainer input[type="number"]:focus {
+  border: 1.5px solid #1976d2;
+  outline: none;
+}
+
+.dreContainer button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  margin-top: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.dreContainer button:hover {
+  background: #1251a3;
+}
+
+.dreReport {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 32px #0002;
+  padding: 32px 32px 28px 32px;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.dreReport h2 {
+  color: #1976d2;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.dreReport h3 {
+  color: #1251a3;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.dreReportTable {
+  min-width: 900px;
+  width: max-content;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fafdff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px #0001;
+}
+
+.dreReportTable th, .dreReportTable td {
+  padding: 10px 8px;
+  text-align: left;
+  font-size: 1.05rem;
+}
+
+.dreReportTable th {
+  background: #e3eaf2;
+  color: #1976d2;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.dreReportTable tr:nth-child(even) td {
+  background: #f4f8fb;
+}
+
+.dreReportTable tr:last-child td {
+  border-bottom: none;
+}
+
+.dreReportTable input[type="number"] {
+  width: 80px;
+  padding: 7px 10px;
+  border: 1.5px solid #c9d6e2;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f7fbff;
+  transition: border 0.2s;
+  outline: none;
+}
+
+.dreReportTable input[type="number"]:focus {
+  border: 2px solid #1976d2;
+  background: #e3eaf2;
+}
+
+.dreReportTable tr[style*="fontWeight: 600"] td {
+  background: #e3eaf2 !important;
+  color: #1976d2;
+  font-weight: 700;
+  border-top: 2px solid #c9d6e2;
+}
+
+.dreReport ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 0;
+  font-size: 1.08rem;
+}
+
+.dreReport ul li {
+  margin-bottom: 7px;
+  color: #333;
+}
+
+.dreReport strong {
+  color: #1976d2;
+  font-size: 1.12rem;
+}
+
+.dreChart {
+  width: 100%;
+  min-height: 180px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e3eaf2;
+  border-radius: 16px;
+  color: #1976d2;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 18px 0;
+  box-shadow: 0 2px 12px #0001;
+}
+
+@media (max-width: 1100px) {
+  .dreContainer, .dreReport {
+    max-width: 98vw;
+    padding: 18px 8px 16px 8px;
+  }
+  .dreReportTable {
+    min-width: 700px;
+  }
+}
+
+@media (max-width: 900px) {
+  .dreSplitContainer {
+    flex-direction: column;
+    gap: 24px;
+    padding: 18px 2vw;
+    min-height: unset;
+  }
+}
+
+@media (max-width: 700px) {
+  .dreContainer, .dreReport {
+    padding: 8px 2vw 8px 2vw;
+  }
+  .dreReportTable {
+    min-width: 500px;
+  }
+}
